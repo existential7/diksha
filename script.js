@@ -117,16 +117,10 @@ function showAssessmentMessage(hasAssessment) {
 }
 
 // Reveal content with animation
-const revealContent = () => {
+function revealContent() {
     const songIndex = getRandomIndex(songs);
     const messageIndex = getRandomIndex(messages);
-    const songEmbed = `<iframe src="${songs[songIndex]}" style="border-radius:12px" width="100%" height="120" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
-    document.getElementById('song-embed').innerHTML = songEmbed;
-    document.getElementById('message').innerText = messages[messageIndex];
-    document.getElementById('content').classList.remove('hidden');
-    document.getElementById('assessment-question').classList.remove('hidden');
-    document.getElementById('spin-button').classList.add('hidden');
-};
+    
     // Spin animation
     const btn = document.querySelector('.reveal-btn');
     btn.style.transition = 'transform 1s';
@@ -146,3 +140,6 @@ const revealContent = () => {
         document.getElementById('assessment-question').classList.remove('hidden');
     }, 1000);
 }
+
+
+
