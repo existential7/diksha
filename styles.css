@@ -1,0 +1,151 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('2.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #FFE4E1;
+    overflow-x: hidden;
+}
+
+.container {
+    text-align: center;
+    background: linear-gradient(rgba(40, 0, 20, 0.7), rgba(40, 0, 20, 0.7)), url('1.jpg') no-repeat center center/cover;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+
+.welcome {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+    color: #FFE4E1; /* Misty rose */
+    padding: 20px;
+    z-index: 2;
+}
+
+.intro {
+    font-style: italic;
+    margin-bottom: 20px;
+    z-index: 2;
+}
+
+.reveal-btn {
+    background: #42042a; /* Deep pink */
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+    animation: heartbeat 1.5s infinite;
+    z-index: 2;
+}
+
+.reveal-btn:hover {
+    background: #530d3c; /* Burgundy */
+    transform: scale(1.1);
+}
+
+#daily-content {
+    margin-top: 30px;
+    opacity: 0;
+    transition: opacity 1s ease;
+    z-index: 2;
+}
+
+#daily-content.show {
+    opacity: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+#song-embed {
+    background: #600d42; /* Deep pink for consistent color */
+    border: 2px solid #FFE4E1; /* Misty rose border for contrast */
+    border-radius: 12px;
+    padding: 15px; /* Slightly more padding for a polished look */
+    margin: 20px auto;
+    max-width: 100%;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+#song-error {
+    color: #FF4500; /* Orange for errors to stand out */
+    font-style: italic;
+    z-index: 2;
+}
+
+#message, #assessment-message {
+    font-size: 1.1em;
+    background: rgba(255, 228, 225, 0.2); /* Misty rose with transparency */
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+#assessment-question button {
+    background: #5a043a;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#assessment-question button:hover {
+    background: #3d0023;
+}
+
+.quote {
+    margin: 20px 0;
+    font-style: italic;
+    color: #FFDAB9; /* Peach puff for quote */
+    z-index: 2;
+}
+
+.contact-btn {
+    display: inline-block;
+    margin: 20px 0;
+    background: #540738;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    z-index: 2;
+}
+
+.contact-btn:hover {
+    background: #5a033a;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #FFE4E1;
+    z-index: 2;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@media (max-width: 600px) {
+    .container { padding: 20px; }
+    .welcome { font-size: 2em; }
+    #song-embed iframe { height: 120px; }
+}
